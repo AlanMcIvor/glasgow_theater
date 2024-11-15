@@ -30,6 +30,7 @@
   --accent: #e74c3c;
   --button_color: rgba(180, 180, 180, 0.41);
   --overlay: rgba(1, 1, 1, 0.42);
+  --section_bg: #f4f2f1;
   --text_primary: #fff;
   --text_secondary: #d6d6d6;
 }
@@ -258,7 +259,7 @@ header {
 /* section 3 */
 
 #section_3 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../assets/images/sec1_img.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -287,6 +288,11 @@ header {
 
 .sec_txt p span {
   color: var(--accent);
+}
+
+.show_date {
+  font-size: var(--body_txt);
+  font-weight: var(--normal);
 }
 
 /* upcoming shows */
@@ -321,16 +327,76 @@ header {
 .show_date::after {
   content: "";
   width: 2px;
-  height: 65px;
+  height: 45px;
   position: absolute;
   right: -15px;
   top: 0;
   background-color: var(--text_secondary);
 }
 
+.show_title h2 {
+  font-family: "Crimson Text", "Sans-serif";
+  text-transform: capitalize;
+  font-weight: var(--bold);
+}
+
+.show_genre h2,
+.show_location h2 {
+  font-family: "Montserrat", "serif";
+}
+
 .show_btn .action_btn {
   color: #000;
   outline: 1px solid #000;
+}
+
+/* performers */
+#performers {
+  background: var(--section_bg);
+  min-height: 500px;
+}
+
+.performers_title {
+  text-align: center;
+  margin-block: 3rem;
+  text-transform: capitalize;
+  font-size: var(--h2);
+  font-weight: var(--bold);
+  padding-top: 2rem;
+}
+.performers_details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.performer_txt {
+  margin-top: 1rem;
+}
+
+.performer_txt h3 {
+  font-weight: var(--bold);
+}
+
+.performer_txt p {
+  color: var(--accent);
+}
+
+/* section 5 */
+#section_5 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../assets/images/sec2_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 649px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 /* responsive */
 /* mobile menu */
@@ -382,6 +448,13 @@ header {
 
   .show_date {
     display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .performers_details {
+    justify-content: center;
+    gap: 2em;
   }
 }
 
