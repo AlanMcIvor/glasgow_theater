@@ -229,7 +229,7 @@ header {
   display: flex;
   justify-content: space-around;
   margin: auto;
-  margin-top: 5rem;
+  margin-block: 5rem;
   padding-inline: 2rem;
   max-width: 1200px;
   min-height: 500px;
@@ -255,6 +255,39 @@ header {
   outline: 1px solid #000;
 }
 
+/* section 3 */
+
+#section_3 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/images/sec1_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  min-height: 649px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.sec_txt {
+  margin-left: 15rem;
+}
+
+.sec_txt h2 {
+  font-size: var(--h2);
+  color: #fff;
+  font-family: "Crimson text" "sans-serif";
+}
+
+.sec_txt p {
+  font-size: var(--body_txt);
+  color: #fff;
+}
+
+.sec_txt p span {
+  color: var(--accent);
+}
 /* responsive */
 /* mobile menu */
 @media screen and (max-width: 1090px) {
@@ -293,7 +326,15 @@ header {
   .stories_img {
     display: none;
   }
-}
+  
+  #section_3 {
+    justify-content: flex-end;
+  }
+  
+  .sec_txt {
+    margin: 0 auto;
+    text-align: center;
+  }
 
 @media screen and (max-width: 576px) {
   .dropdown_menu {
@@ -304,6 +345,11 @@ header {
   #stories {
     text-align: center;
   }
+
+  .sec_txt {
+    margin: 0 1em;
+
+
 }
 
 /* home main */
