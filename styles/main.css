@@ -504,7 +504,7 @@ header {
   position: relative;
 }
 
-.show_title,
+.show_card_title,
 .show_card_details {
   position: absolute;
   color: white;
@@ -512,7 +512,7 @@ header {
   z-index: 2;
 }
 
-.show_title {
+.show_card_title {
   bottom: 60px;
   left: 20px;
   font-family: "crimson text", "sans-serif";
