@@ -90,6 +90,7 @@ header {
   left: 0;
   padding: 0 2rem;
   transition: background-color 1s ease;
+  z-index: 999;
 }
 
 .navbar {
@@ -408,10 +409,131 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 649px;
+  padding-top: 5rem;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+/* shows */
+#shows_hero {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/images/shows_hero_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 70dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#shows_list {
+  margin: auto;
+}
+
+.shows_txt {
+  font-family: "Crimson Text", "sans-serif";
+  font-size: var(--h1);
+  font-weight: var(--bold);
+  color: #fff;
+}
+
+.show_search {
+  margin-block: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show_search input {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+.show_search button {
+  width: 20%;
+  padding: 10px;
+  float: left;
+  background: var(--accent);
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+.search_icon {
+  position: absolute;
+  z-index: 99;
+  padding-left: 220px;
+  padding-top: 14px;
+  color: rgb(97, 97, 97);
+}
+
+.show_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+.show_card {
+  position: relative;
+  max-width: 350px;
+  cursor: pointer;
+  transition: scale 300ms ease-in-out;
+}
+
+.show_card:hover {
+  scale: 1.1;
+}
+
+.show_img {
+  position: relative;
+}
+
+.show_title,
+.show_card_details {
+  position: absolute;
+  color: white;
+  padding: 10px;
+  z-index: 2;
+}
+
+.show_title {
+  bottom: 60px;
+  left: 20px;
+  font-family: "crimson text", "sans-serif";
+  font-size: var(--h3);
+}
+
+.show_card_details {
+  bottom: 20px;
+  left: 20px;
+  font-size: var(--body_txt);
+  color: var(--text_secondary);
+}
+
+.card_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1; /* Ensure overlay is above the image but below text */
 }
 
 /* footer */
