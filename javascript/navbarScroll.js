@@ -4,11 +4,11 @@
 const nav = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
-  // specifiy the beginning and end 
+  // specifiy the beginning and end
   const scrollPosition =
     document.documentElement.scrollTop || document.body.scrollTop;
 
-  if (scrollPosition >= 500) {
+  if (scrollPosition >= 300) {
     nav.classList.add("header_coloured");
     nav.classList.remove("header_transparent");
   } else {
