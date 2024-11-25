@@ -9,6 +9,8 @@
   --h1_mobile: 2em;
   --h2: 1.75em;
   --h2_mobile: 1.25em;
+  --seperator: 2.25em;
+  --seperator_mobile: 1.25em;
   /* font weights */
   --bold: 700;
   --reg: 400;
@@ -142,9 +144,7 @@ header {
   background-position: center;
   min-height: 100dvh;
   min-width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   text-align: center;
 }
 
@@ -243,6 +243,44 @@ ul li {
   width: auto;
 }
 
+/* seperator1 */
+
+.seperator1 {
+  margin-top: 5em;
+  min-height: 649px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/images/sec1_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100dvh;
+  min-width: 100vw;
+}
+
+.seperator1 .wrapper {
+  color: white;
+  align-items: flex-end;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.seperator1_txt {
+  padding-bottom: 2em;
+}
+
+.seperator1_txt span {
+  color: var(--accent);
+}
+
+.seperator1_txt h2 {
+  font-size: var(--seperator);
+  font-family: "Crimson Text", "serif";
+}
+
+.seperator1_txt p {
+  font-family: "Montserrat", "sans-serif";
+}
+
 @media screen and (max-width: 915px) {
   nav {
     margin-inline: 1em;
@@ -276,6 +314,17 @@ ul li {
   .hero_txt h3 {
     font-size: var(--h2_mobile);
     font-weight: var(--reg);
+  }
+
+  .seperator1_txt {
+    text-align: center;
+    margin-inline: 1em;
+    
+  }
+
+  .seperator1_txt h2 {
+    font-size: var(--seperator_mobile);
+    font-family: "Crimson Text", "serif";
   }
 }
 
