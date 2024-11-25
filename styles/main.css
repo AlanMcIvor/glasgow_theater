@@ -38,6 +38,10 @@ footer {
   justify-content: center;
 }
 
+.active {
+  color: var(--accent) !important;
+}
+
 /* header */
 
 header {
