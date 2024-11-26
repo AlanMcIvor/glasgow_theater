@@ -12,11 +12,13 @@
   --seperator: 2.25em;
   --seperator_mobile: 1.25em;
   /* font weights */
-  --bold: 700;
+  --bold: 800;
+  --semi_bold: 600;
   --reg: 400;
   /* colors */
   --accent: #e74c3c;
   --button_color: rgba(180, 180, 180, 0.41);
+  --border_color: #afaeae;
 }
 
 body {
@@ -281,6 +283,66 @@ ul li {
   font-family: "Montserrat", "sans-serif";
 }
 
+/* upcoming shows */
+
+
+.upcoming_shows h2 {
+  margin-block: 2em;
+  text-align: center;
+  font-family: "Crimson Text", "sans-serif";
+  font-size: var(--h2);
+  font-weight: var(--semi_bold);
+}
+
+.upcoming_shows .wrapper{
+  padding-inline: 2em;
+}
+
+
+.upcoming_shows h2 span {
+  color: var(--accent);
+}
+
+.show_card {
+  justify-content: space-between;
+  font-family: "Montserrat", "serif";
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--border_color);
+  padding-block: 0.5em;
+}
+
+.show_date {
+  position: relative;
+  font-weight: var(--semi_bold);
+}
+
+.show_date::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 40px;
+  border: 1px solid var(--border_color);
+  right: -10px;
+  top: 0;
+}
+
+.show_btn a{
+  color: black !important;
+  border: 1px solid black;
+  display: inline-block;
+  background-color: var(--button_color);
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  font-size: var(--cta);
+  cursor: pointer;
+  transition: scale 0.3s ease;
+  outline: 1px solid white;
+}
+
+.show_btn a span{
+  margin-right: 1em;
+}
+
 @media screen and (max-width: 915px) {
   nav {
     margin-inline: 1em;
@@ -319,13 +381,25 @@ ul li {
   .seperator1_txt {
     text-align: center;
     margin-inline: 1em;
-    
   }
 
   .seperator1_txt h2 {
     font-size: var(--seperator_mobile);
     font-family: "Crimson Text", "serif";
   }
+
+
+
+  
+.show_card {
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.show_date::after{
+  display: none;
+}
 }
 
 @media screen and (max-width: 950px) {
