@@ -535,6 +535,74 @@ input[type="text"] {
   font-family: "Montserrat", "sans-serif";
 }
 
+/* show info page */
+
+.show_info_body {
+  background-color: #080808;
+}
+
+.info_grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+
+  grid-template-areas:
+    "img aside"
+    "info .";
+
+  gap: 25px;
+}
+
+.show_info_title {
+  font-family: "Crimson Text", "sans-serif";
+  color: white;
+  padding-top: 9em;
+}
+
+.show_info_title h3 {
+  font-size: var(--h2);
+}
+
+.show_info_img {
+  grid-area: img;
+}
+
+.show_info_details {
+  color: white;
+  margin-top: 2em;
+  grid-area: info;
+}
+
+.show_info_details p {
+  margin-block: 5px;
+}
+
+.info_aside {
+  grid-area: aside;
+
+  background-color: #121212;
+  color: white;
+  font-family: "Montserrat", "serif";
+  padding: 10px;
+  height: fit-content;
+  width: 45%;
+  margin-top: -50px;
+}
+
+.info_aside .action_btn {
+  display: inline-block;
+  background-color: var(--button_color);
+  border-radius: 25px;
+  outline: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  font-size: var(--cta);
+  cursor: pointer;
+  transition: scale 0.3s ease;
+  color: white;
+  outline: 1px solid white;
+  margin-top: 1em;
+}
+
 @media screen and (max-width: 915px) {
   nav {
     margin-inline: 1em;
