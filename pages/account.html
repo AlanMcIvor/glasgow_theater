@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Glasgow Theater Co.</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar flex wrapper header_transparent">
+          <div class="logo"><a href="">Glasgow Theater Co.</a></div>
+          <ul class="links flex">
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Shows</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="action_btns flex">
+            <a href="#" class="action_btn">Sign Up</a>
+            <a href="#" class="action_btn">Login</a>
+          </div>
+          <div class="toggle_btn"><i class="fa-solid fa-bars fa-2xl"></i></div>
+        </div>
+      
+        <div class="dropdown_menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shows</a></li>
+        <li><a class="active" href="#">Bookings</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <div class="action_btns">
+          <a href="#" class="action_btn">Sign Up</a>
+          <a href="#" class="action_btn">login</a>
+        </div>
+      </nav>
+    </header>
+
+     <main>
+    
+      <section class="myaccount wrapper">
+        <div class="account_title">
+          <h2>My Account</h2>
+        </div>
+
+
+        <div class="account_tabs flex">
+          <button class="account_tab_btn active" onclick="openTab('bookings')">Bookings</button>
+          <button class="account_tab_btn" onclick="openTab('profile')">My Profile</button>
+          <button class="account_tab_btn" onclick="openTab('settings')">Settings</button>
+        </div>
+
+        <div id="bookings" class="tab">
+        
+          <div class="tab_title">
+            <h3>My Bookings</h3>
+
+            <div class="display_if_nothing_booked">
+              <p>You have no bookings as yet but we offer a wide range of entertainment </p>
+              <a href="">Our Shows</a>
+            </div>
+
+            <div class="bookings_container  flex">
+              <div class="show_bookings flex">
+                <div class="show_booking_date_time">
+                  <h4>Date and Time</h4>
+                  <p>12th Dec 2024</p>
+                  <p>17:00 - 19:00</p>
+                </div>
+                <div class="show_booking_title">
+                  <h4>Show Title</h4>
+                  <p>The Phantom Of The Opera</p>
+                </div>
+                <div class="show_booking_location">
+                  <h4>Location</h4>
+                  <p>Glasgow</p>
+                </div>
+                <div class="cancel">
+                  <h4>Cancel Booking</h4>
+                  <button class="booking_cancel">Cancel Booking</button>
+                </div>
+                <div class="download_tickets">
+                  <h4>Download Tickets</h4>
+                  <a href="">Tickets</a>
+                </div>
+              </div>
+
+              <div class="show_bookings flex">
+                <div class="show_booking_date_time">
+                  <h4>Date and Time</h4>
+                  <p>12th Dec 2024</p>
+                  <p>17:00 - 19:00</p>
+                </div>
+                <div class="show_booking_title">
+                  <h4>Show Title</h4>
+                  <p>The Phantom Of The Opera</p>
+                </div>
+                <div class="show_booking_location">
+                  <h4>Location</h4>
+                  <p>Glasgow</p>
+                </div>
+                <div class="cancel">
+                  <h4>Cancel Booking</h4>
+                  <button class="booking_cancel">Cancel Booking</button>
+                </div>
+                <div class="download_tickets">
+                  <h4>Download Tickets</h4>
+                  <a href="">Tickets</a>
+                </div>
+              </div>
+
+              <div class="show_bookings flex">
+                <div class="show_booking_date_time">
+                  <h4>Date and Time</h4>
+                  <p>12th Dec 2024</p>
+                  <p>17:00 - 19:00</p>
+                </div>
+                <div class="show_booking_title">
+                  <h4>Show Title</h4>
+                  <p>The Phantom Of The Opera</p>
+                </div>
+                <div class="show_booking_location">
+                  <h4>Location</h4>
+                  <p>Glasgow</p>
+                </div>
+                <div class="cancel">
+                  <h4>Cancel Booking</h4>
+                  <button class="booking_cancel">Cancel Booking</button>
+                </div>
+                <div class="download_tickets">
+                  <h4>Download Tickets</h4>
+                  <a href="">Tickets</a>
+                </div>
+              </div>
+
+              <div class="show_bookings flex">
+                <div class="show_booking_date_time">
+                  <h4>Date and Time</h4>
+                  <p>12th Dec 2024</p>
+                  <p>17:00 - 19:00</p>
+                </div>
+                <div class="show_booking_title">
+                  <h4>Show Title</h4>
+                  <p>The Phantom Of The Opera</p>
+                </div>
+                <div class="show_booking_location">
+                  <h4>Location</h4>
+                  <p>Glasgow</p>
+                </div>
+                <div class="cancel">
+                  <h4>Cancel Booking</h4>
+                  <button class="booking_cancel">Cancel Booking</button>
+                </div>
+                <div class="download_tickets">
+                  <h4>Download Tickets</h4>
+                  <a href="">Tickets</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <div id="profile" class="tab" style="display:none">
+          <h2>Paris</h2>
+          <p>Paris is the capital of France.</p>
+        </div>
+        
+        <div id="settings" class="tab" style="display:none">
+          <h2>Tokyo</h2>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="wrapper">
+          <div class="social_icons">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-google-plus"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="footer_nav">
+              <ul><li><a href="">Home</a></li>
+                  <li><a href="">About</a></li>
+                  <li><a href="">Contact Us</a></li>
+              </ul>
+          </div>
+          
+      </div>
+      <div class="footer_bottom">
+          <p>Copyright &copy;2023;</p>
+      </div>
+  </footer>
+
+    <script src="../javascript/mobileMenu.js"></script>
+    <script src="../javascript/tabs.js"></script>
+  </body>
+</html>

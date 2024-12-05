@@ -50,21 +50,13 @@ footer {
 
 header {
   position: fixed;
-  width: 100vw;
+  min-width: 100vw;
+  background-color: #141414;
   font-family: "Montserrat", "serif";
   font-size: var(--main_font_size);
   font-weight: var(--bold);
   z-index: 999;
   padding: 10px;
-  transition: background-color 300ms ease-in-out;
-}
-
-.header_transparent {
-  background-color: transparent;
-}
-
-.header_coloured {
-  background-color: black;
 }
 
 .navbar {
@@ -266,6 +258,14 @@ ul li {
 .seperator2 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../assets/images/sec2_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.seperator3 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/images/show_info_bottom.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -551,16 +551,31 @@ input[type="text"] {
     "info .";
 
   gap: 25px;
+  margin-inline: 1.5em;
+}
+
+.title_container {
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
 }
 
 .show_info_title {
   font-family: "Crimson Text", "sans-serif";
   color: white;
   padding-top: 9em;
+  margin-left: 1.5em;
 }
 
 .show_info_title h3 {
   font-size: var(--h2);
+}
+
+.show_crew_details {
+  display: none;
+  margin-right: 5em;
+  gap: 25px;
+  align-items: flex-end;
 }
 
 .show_info_img {
@@ -569,7 +584,7 @@ input[type="text"] {
 
 .show_info_details {
   color: white;
-  margin-top: 2em;
+  margin-block: 2em;
   grid-area: info;
 }
 
@@ -601,6 +616,157 @@ input[type="text"] {
   color: white;
   outline: 1px solid white;
   margin-top: 1em;
+}
+
+.review_title {
+  padding-block: 2em;
+  text-align: center;
+  font-family: "Crimson Text", "sans-serif";
+}
+
+.review_title span {
+  color: var(--accent);
+}
+
+.show_info_reviews {
+  background-color: #ffffff;
+  justify-content: space-between;
+  padding-bottom: 2em;
+}
+
+.show_info_reviews .wrapper {
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: space-between;
+}
+
+.review_card {
+  max-width: 350px;
+  color: white;
+  border: 1px solid rgb(214, 214, 214);
+  color: black;
+  padding: 1em;
+}
+
+.review_avatar img {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.review_top {
+  justify-content: flex-start;
+  gap: 2em;
+  font-size: 1.2em;
+  font-weight: var(--semi_bold);
+}
+
+.stars {
+  margin-block: 0.5em;
+}
+
+.review_card .review_top .author {
+  font-family: "Crimson Text", "sans-serif";
+}
+
+.review_body,
+.review_date {
+  font-family: "Montserrat", "serif";
+}
+
+.review_date {
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  font-weight: var(--semi_bold);
+}
+
+/* account */
+
+.myaccount {
+  padding-top: 9em;
+}
+
+.account_title {
+  font-family: "Crimson Text", "Sans-serif";
+  font-size: var(--h2);
+}
+
+.account_tabs {
+  justify-content: flex-start;
+  gap: 25px;
+  border-bottom: 1px solid black;
+  margin-bottom: 2em;
+}
+
+.account_tab_btn {
+  background: none;
+  outline: none;
+  border: none;
+  font-family: "Montserrat", "serif";
+  font-size: var(--main_font_size);
+  font-weight: var(--semi_bold);
+  cursor: pointer;
+}
+
+.tab_title {
+  font-family: "Montserrat", "serif";
+}
+
+.display_if_nothing_booked {
+  display: none;
+}
+
+.display_if_nothing_booked p {
+  margin-block: 1em;
+}
+
+.display_if_nothing_booked a {
+  display: inline-block;
+  background-color: var(--accent);
+  padding: 1em 2em;
+  margin-bottom: 2em;
+  color: white;
+  font-weight: var(--semi_bold);
+}
+
+.bookings_container {
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: column;
+}
+
+.show_bookings {
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-block: 2em;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.show_bookings h4 {
+  font-weight: var(--semi_bold);
+}
+@media screen and (max-width: 1140px) {
+  .info_grid {
+    grid-template-areas:
+      "img img"
+      "info info";
+  }
+
+  .info_aside {
+    display: none;
+  }
+
+  .show_crew_details {
+    display: flex;
+  }
+
+  .show_info_reviews .wrapper {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 915px) {
@@ -691,5 +857,22 @@ input[type="text"] {
 
   .stories_txt {
     margin-inline: 1em;
+  }
+
+  .show_info_title h3 {
+    font-size: var(--h2_mobile);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .show_crew_details {
+    margin-right: 15px;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .show_crew_details {
+    display: none;
   }
 }
